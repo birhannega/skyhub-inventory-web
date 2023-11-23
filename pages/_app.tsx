@@ -1,20 +1,12 @@
 
-import React from 'react';
+import type { AppProps } from 'next/app';
 import '../styles/globals.css';
-import Layout from './Layout';
+import React from "react";
 
 
-const Home: React.FC = () => {
-    return (
-        <Layout>
-            {/* Header - Already included in Layout */}
-
-            {/* Hero Section */}
-
-            {/* <Features /> */}
-
-
-        </Layout>
-    )
+function MyApp({ Component, pageProps }: AppProps) {
+    return <Component {...pageProps} />
 }
-export default Home
+
+export default MyApp
+

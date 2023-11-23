@@ -15,7 +15,7 @@ const  NavigationBar: React.FC = () => {
                 <Link href="/company">Company</Link>
             </div>
             <div>
-                <Link href="/login" className="px-4 py-2 rounded border border-black hover:bg-black hover:text-white transition-colors">
+                <Link  href="/auth" className="px-4 py-2 rounded border border-black hover:bg-black hover:text-white transition-colors">
                     Log in
                 </Link>
             </div>
