@@ -1,12 +1,20 @@
-
+// pages/_app.tsx
 import type { AppProps } from 'next/app';
+import React, { useEffect } from 'react';
 import '../styles/globals.css';
-import React from "react";
 
+const InventoryApp: React.FC<AppProps> = ({ Component, pageProps }) => {
+  useEffect(() => {
+    console.log("App Mounted");
+    // Any side-effects can be handled here.
 
-function MyApp({ Component, pageProps }: AppProps) {
-    return <Component {...pageProps} />
-}
+    return () => {
+      // Cleanup if needed when the app is unmounted or rerendered.
+      console.log("App Unmounted");
+    };
+  }, []);
 
-export default MyApp
+  return <Component {...pageProps} />;
+};
 
+export default InventoryApp;
